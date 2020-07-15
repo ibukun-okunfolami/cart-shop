@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #191920 url("./assets/background.svg") no-repeat center top;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+  font: 14px sans-serif;
+}
+
+#root {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.brand {
+  text-decoration: none;
+}
+.brand-name {
+  color: #7d65e6;
+  text-decoration: none;
+  font-size: 1.8rem;
+  /* letter-spacing: 0.3rem; */
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.link {
+  color: #7d65e6;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+}
+.product-list .product-list__li {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+}
+.product-list .product-list__li .product-list__item {
+  display: flex;
+  flex-direction: column;
+}
+.product-list .product-list__li .product-list__item img {
+  align-self: center;
+  max-width: 250px;
+}
+.product-list .product-list__li .product-list__item .product-list__strong {
+  text-align: center;
+}
+.product-list .product-list__li .product-list__item .product-list__price {
+  text-align: end;
+  font-weight: bold;
+}
+.product-list .product-list__li .product-list__btn-container {
+  margin-top: 1.2rem;
+}
+.product-list .product-list__li .product-list__btn-container .product-list__btn {
+  background: #7d65e6;
+  width: 100%;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+.product-list .product-list__li .product-list__btn-container .product-list__btn:hover {
+  background: #7159c1;
+}
+.product-list .product-list__li .product-list__btn-container .product-list__btn .product-list__btn-span {
+  flex: 1;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.no-item {
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list .list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+  padding: 2rem;
+}
+.list .list__item .list__img {
+  width: 120px;
+}
+.list .list__item .list__strong {
+  font-size: 1.2rem;
+}
+.list .list__item .list__qtd {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.list .list__item .list__btn {
+  background: #7d65e6;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 1rem;
+}
+.list .list__item .list__btn:hover {
+  background: #7159c1;
+}
+.list .list__item .list__btn .list__btn-span {
+  text-align: center;
+  font-weight: bold;
+}
+
+.skeleton {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}
+
+.skeletonline,
+.skeletonline::before {
+  width: 5.5em;
+  border-radius: 55px;
+  content: "\00a0";
+}
+
+.post.loading {
+  justify-content: center;
+}
+
+.placehold {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  animation: loadingAnimation 1s infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 280px;
+  height: 250px;
+}
