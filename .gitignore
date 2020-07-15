@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-/.netlify
+/.net
 .pnp.js
 
 # testing
