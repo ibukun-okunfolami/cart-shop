@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import CartContext from "./cartContext";
 import CartReducer from "./cartReducer";
-import { ADD_PRODUCT, REMOVE_PRODUCT } from "../types";
+import * as types from "../types";
 
 const products = [
   {
@@ -51,13 +51,20 @@ const CartState = (props) => {
 
   const addProductToCart = (product) => {
     setTimeout(() => {
-      dispatch({ type: ADD_PRODUCT, product: product });
+      dispatch({ type: types.ADD_PRODUCT, product: product });
     }, 700);
+  };
+
+  const increaseQuantity = (productId) => {
+    dispatch({ type: types.INCREASE_QUANTITY, productId: productId });
+  };
+  const decreaseQuantity = (productId) => {
+    dispatch({ type: types.DECREASE_QUANTITY, productId: productId });
   };
 
   const removeProductFromCart = (productId) => {
     setTimeout(() => {
-      dispatch({ type: REMOVE_PRODUCT, productId: productId });
+      dispatch({ type: types.REMOVE_PRODUCT, productId: productId });
     }, 700);
   };
 
@@ -68,6 +75,8 @@ const CartState = (props) => {
         cart: state.cart,
         addProduct: addProductToCart,
         removeProduct: removeProductFromCart,
+        increaseQuantity: increaseQuantity,
+        decreaseQuantity,
       }}
     >
       {props.children}

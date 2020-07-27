@@ -151,9 +151,23 @@ li {
   overflow: hidden;
   padding: 1rem;
 }
+.list .list__item .list__add {
+  background: #7d65e6;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  /* overflow: hidden; */
+  padding: 1rem;
+}
 .list .list__item .list__btn:hover {
   background: #7159c1;
 }
+
+/* .list .list__item .list__add:hover {
+  background: #fff;
+  color: #7d65e6;
+  border: 1px solid#7d65e6;
+} */
 .list .list__item .list__btn .list__btn-span {
   text-align: center;
   font-weight: bold;
